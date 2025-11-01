@@ -1,0 +1,20 @@
+{
+  "name": "advanceauthproject",
+  "version": "1.0.0",
+  "description": "project mern auth",
+  "homepage": "https://github.com/Lakshya-Choudhary1/advanceAuthProject#readme",
+  "bugs": {
+    "url": "https://github.com/Lakshya-Choudhary1/advanceAuthProject/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Lakshya-Choudhary1/advanceAuthProject.git"
+  },
+  "license": "ISC",
+  "author": "LAKSHYA CHOUDHARY",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
