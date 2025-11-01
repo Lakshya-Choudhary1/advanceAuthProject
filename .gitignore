@@ -1,0 +1,12 @@
+# URL REQUESTS LOG FILE
+request.log
+log
+#ENVIRENMENT VARIABLE
+.env
+
+# NODE MODULES 
+node_modules
+
+# CERTIFICATES AND KEY SSL 
+cert.pem
+key.pem
