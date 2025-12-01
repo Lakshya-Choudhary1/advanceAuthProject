@@ -13,6 +13,6 @@ authRoute.post('/signup',signup);
 authRoute.post('/verify-email',verifyEmail);
 
 authRoute.post('/forgot-password',forgotPassword);
-authRoute.post('/reset-password/:id',resetPassword);
+authRoute.get('/reset-password/:id',resetPassword);
 
 export default authRoute;

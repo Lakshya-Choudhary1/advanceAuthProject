@@ -1,8 +1,7 @@
 import { create } from "zustand";
 import axios from "axios";
-import { ForgotPassword } from "../pages/ForgotPassword";
 
-const API_URL = "http://localhost:3000/api/auth"; 
+const API_URL = "https://localhost:3000/api/auth"; 
 
 // Create an axios instance for reuse
 const axiosInstance = axios.create({

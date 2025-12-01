@@ -10,8 +10,7 @@ mongoose.connection.on('error',()=>{
 
 const connectDB = async(MONGO_URI) =>{
      try{
-          const conn = await mongoose.connect(MONGO_URI)
-          console.log("MONGO HOST : " , conn.connection.host);
+           await mongoose.connect(MONGO_URI)
      }catch(error){
           console.log("MONGO ERROR : " , error.message);
      }

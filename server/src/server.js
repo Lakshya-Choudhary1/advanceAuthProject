@@ -14,10 +14,11 @@ const _filename = fileURLToPath(import.meta.url);
 const _dirname = dirname(_filename);
 const MONGO_URI = process.env.MONGO_URI;
 const PORT = process.env.PORT || 8000;
-// const server = http.createServer(app);
+
+
 const server = https.createServer({
-     cert: fs.readFileSync(join(_dirname,"..",'..','/cert.pem')),
-     key: fs.readFileSync(join(_dirname,"..",'..','/key.pem'))
+     cert: fs.readFileSync(join(_dirname,"..",'..','cert.pem')),
+     key: fs.readFileSync(join(_dirname,"..",'..','key.pem'))
 },app)
 
 const startServer = async () =>{

@@ -18,18 +18,18 @@ const RedirectAuthenticatedUser= ({children}) => {
 
 const ProtectedRoute = ({children}) =>{
   const {isAuthenticated,user} = useAuthStore();
-  if(!isAuthenticated) return <Navigate to="/login" replace/>
+  if(!isAuthenticated ) return <Navigate to="/login" replace/>
   return children
 }
 
 const App = () =>{
-  const {checkAuth,isCheckingAuth} = useAuthStore();
-  useEffect(()=>{
-     checkAuth() ;
-  },[checkAuth])
+  // const {checkAuth,isCheckingAuth} = useAuthStore();
+  // useEffect(()=>{
+  //    checkAuth() ;
+  // },[checkAuth])
 
   
- if(isCheckingAuth) return <LoadingSpinner />
+//  if(isCheckingAuth) return <LoadingSpinner />
 
 
   return<>
@@ -61,11 +61,7 @@ const App = () =>{
 
         <Routes>
 
-          <Route path="/" element={
-            <ProtectedRoute >
-              <DashboardPage />
-            </ProtectedRoute>
-            } />
+          <Route path="/" element={<DashboardPage />}/>
 
           <Route path="/signup" element={
             <RedirectAuthenticatedUser>
