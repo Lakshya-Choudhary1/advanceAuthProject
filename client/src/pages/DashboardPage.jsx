@@ -1,7 +1,6 @@
 import {motion} from "framer-motion";
 import { useAuthStore } from "../store/auth.store.js";
-import { LogOut } from "lucide-react";
-import { Navigate } from "react-router-dom";
+
 function DashboardPage() {
   const {user,logout
   } = useAuthStore();
@@ -35,9 +34,7 @@ function DashboardPage() {
             <h3 className="text-xl font-semibold text-green-400 mb-3">Profile Information</h3>
             <hr className="text-gray-500 mb-5"/>
           
-          <h1 className="text-amber-50">Name : {user.name? user.name : 'not Exists'}</h1>
-          <h1 className="text-amber-50">Email : {user.email? user.email : 'not Exists'}</h1>
-           
+        
              
         </motion.div>
         <motion.div className="pt-2 text-red-600/90 font-bold  pr-4 text-lg hover:opacity-70" onClick={handleLogout}>

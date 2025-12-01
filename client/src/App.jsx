@@ -23,13 +23,13 @@ const ProtectedRoute = ({children}) =>{
 }
 
 const App = () =>{
-  // const {checkAuth,isCheckingAuth} = useAuthStore();
-  // useEffect(()=>{
-  //    checkAuth() ;
-  // },[checkAuth])
+  const {checkAuth,isCheckingAuth} = useAuthStore();
+  useEffect(()=>{
+     checkAuth() ;
+  },[checkAuth])
 
   
-//  if(isCheckingAuth) return <LoadingSpinner />
+ if(isCheckingAuth) return <LoadingSpinner />
 
 
   return<>
@@ -61,7 +61,11 @@ const App = () =>{
 
         <Routes>
 
-          <Route path="/" element={<DashboardPage />}/>
+          <Route path="/" element={
+            <ProtectedRoute>
+              <DashboardPage />
+            </ProtectedRoute>
+          } />
 
           <Route path="/signup" element={
             <RedirectAuthenticatedUser>
