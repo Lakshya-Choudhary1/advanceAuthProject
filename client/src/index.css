@@ -1,0 +1,24 @@
+@import "tailwindcss";
+
+@font-face {
+     font-family: 'MyFont';
+     src: url('./fonts/japan-ramen/MyFont.otf') format('opentype');
+     font-style: normal;
+     font-weight: 400;
+}
+
+input[type="password"] {
+  font-family: system-ui, sans-serif !important;
+}
+
+
+*{   
+     box-sizing: border-box;
+     font-family: 'Courier New','Roboto', Courier, monospace;
+}
+
+
+
+
+
+

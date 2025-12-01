@@ -1,10 +1,18 @@
 import{Router} from "express"
-
+import { signup ,login , logout, verifyEmail, forgotPassword ,resetPassword,checkAuth} from "../controllers/auth.controllers.js";
+import {verifyToken} from "../middleware/verifyToken.js";
 const authRoute = Router();
 
-authRoute.get('/',(req,res)=>{
-     res.send('<h1>https://localhost:3000/api/auth/</h1>')
-})
 
+authRoute.get('/check-auth',verifyToken , checkAuth);
+
+authRoute.post('/login',login);
+authRoute.get('/logout',logout);
+authRoute.post('/signup',signup);
+
+authRoute.post('/verify-email',verifyEmail);
+
+authRoute.post('/forgot-password',forgotPassword);
+authRoute.post('/reset-password/:id',resetPassword);
 
 export default authRoute;
