@@ -15,11 +15,9 @@
   "type": "module",
   "main": "index.js",
   "scripts": {
-    "client": "npm run dev --prefix client",
-    "build": "npm run build --prefix client",
-    "dev": "nodemon ./server/src/server.js",
+    "build": "npm run build --prefix client && npm i",
     "server": "node ./server/src/server.js",
-    "start": "npm run build && npm run server"
+    "start": "npm run server"
   },
   "dependencies": {
     "bcrypt": "^6.0.0",
