@@ -21,7 +21,7 @@ app.use(cookieParser()); // parser incoming cookie through request
 app.use(helmet()); //secure request headers
 app.use(cors({
      origin : (origin,callback) =>{
-          if(!origin || whitelist_urls.includes(origin)){
+          if(true){
                callback(null,true)
           }else{
                callback(new Error("URL ORIGIN NOT ALLOWED : CORS ERROR"))
